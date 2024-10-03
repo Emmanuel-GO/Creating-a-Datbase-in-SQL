@@ -23,6 +23,50 @@ CREATE TABLE Patients (
 );
 ```
 ---
+_Now I insert the Values_
+
+```
+INSERT INTO Patients (PatientID, FirstName, LastName, DateOfBirth, Gender) 
+VALUES 
+(1, 'John', 'Doe', '1985-07-12', 'Male'),
+(2, 'Jane', 'Smith', '1990-05-22', 'Female'),
+(3, 'Michael', 'Johnson', '1978-11-15', 'Male'),
+(4, 'Emily', 'Davis', '2000-03-10', 'Female'),
+(5, 'Daniel', 'Brown', '1988-01-25', 'Male'),
+(6, 'Sophia', 'Martinez', '1995-09-17', 'Female'),
+(7, 'James', 'Wilson', '1982-02-28', 'Male'),
+(8, 'Olivia', 'Taylor', '1993-07-08', 'Female'),
+(9, 'William', 'Anderson', '1987-10-19', 'Male'),
+(10, 'Emma', 'Thomas', '1998-06-04', 'Female'),
+(11, 'Liam', 'White', '1994-12-11', 'Male'),
+(12, 'Ava', 'Harris', '1991-03-29', 'Female'),
+(13, 'Noah', 'Martin', '1983-06-18', 'Male'),
+(14, 'Isabella', 'Thompson', '1996-04-23', 'Female'),
+(15, 'Mason', 'Garcia', '1980-08-05', 'Male'),
+(16, 'Mia', 'Martinez', '1992-11-02', 'Female'),
+(17, 'Ethan', 'Robinson', '1989-09-09', 'Male'),
+(18, 'Charlotte', 'Clark', '1997-01-16', 'Female'),
+(19, 'Alexander', 'Rodriguez', '1984-07-30', 'Male'),
+(20, 'Amelia', 'Lewis', '1993-02-14', 'Female'),
+(21, 'Lucas', 'Lee', '1986-03-25', 'Male'),
+(22, 'Harper', 'Walker', '1999-08-22', 'Female'),
+(23, 'Aiden', 'Hall', '1981-05-18', 'Male'),
+(24, 'Sofia', 'Allen', '1990-12-09', 'Female'),
+(25, 'Elijah', 'Young', '1987-04-15', 'Male'),
+(26, 'Evelyn', 'King', '1994-10-28', 'Female'),
+(27, 'Logan', 'Scott', '1992-09-06', 'Male'),
+(28, 'Chloe', 'Green', '1995-03-05', 'Female'),
+(29, 'Jackson', 'Adams', '1980-06-27', 'Male'),
+(30, 'Scarlett', 'Baker', '1998-11-11', 'Female');
+
+```
+---
+
+_Results_
+
+![](Patient_table.png)
+
+
 
 _Department_
 ```
