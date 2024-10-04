@@ -62,10 +62,10 @@ VALUES
 ```
 ---
 
-_Results_
-
+**_Results**
+---
 ![](Patient_table.png)
-
+---
 
 
 _Department_
@@ -80,6 +80,28 @@ CREATE TABLE Department (
 );
 
 ```
+---
+_Values for Department table_
+
+```
+INSERT INTO Department (Department_ID, Department_Name, Department_Head, Phone_Number, Location, Number_of_Staff) 
+VALUES 
+(1, 'Cardiology', 'Dr. Michael Johnson', '555-1234', 'Building A, Floor 3', 25),
+(2, 'Surgery', 'Dr. Emily Davis', '555-5678', 'Building B, Floor 2', 40),
+(3, 'Pediatrics', 'Dr. Daniel Brown', '555-9101', 'Building C, Floor 4', 30),
+(4, 'Radiology', 'Dr. Sophia Martinez', '555-1122', 'Building D, Floor 1', 15),
+(5, 'Oncology', 'Dr. James Wilson', '555-3344', 'Building A, Floor 5', 22),
+(6, 'Emergency', 'Dr. Olivia Taylor', '555-5566', 'Building E, Ground Floor', 50),
+(7, 'Neurology', 'Dr. William Anderson', '555-7788', 'Building B, Floor 6', 18),
+(8, 'Orthopedics', 'Dr. Emma Thomas', '555-9900', 'Building C, Floor 2', 28),
+(9, 'Gynecology', 'Dr. Liam White', '555-2233', 'Building A, Floor 1', 20),
+(10, 'Psychiatry', 'Dr. Ava Harris', '555-4455', 'Building D, Floor 3', 12);
+```
+---
+**_Result_**
+---
+![](dept.png)
+---
 
 
 
@@ -104,6 +126,28 @@ CREATE TABLE Doctor (
     FOREIGN KEY (Department_ID) REFERENCES Department(Department_ID)  -- Reference to Department table
 );
 ```
+_Values_
+
+```
+INSERT INTO Doctor (Doctor_ID, First_Name, Last_Name, Gender, Specialty, Phone_Number, Email, Hire_Date, Salary, Department_ID, Date_Of_Birth, Address, Shift_Time, Employment_Status)
+VALUES 
+(1, 'John', 'Doe', 'Male', 'Cardiologist', '555-1234', 'johndoe@hospital.com', '2015-06-10', 120000.00, 1, '1978-04-12', '123 Oak St, Cityville', 'Morning', 'Full-time'),
+(2, 'Sarah', 'Williams', 'Female', 'Surgeon', '555-5678', 'sarahw@hospital.com', '2017-03-22', 150000.00, 2, '1983-08-30', '456 Maple Ave, Townsville', 'Night', 'Full-time'),
+(3, 'James', 'Smith', 'Male', 'Pediatrician', '555-9101', 'jamessmith@hospital.com', '2020-01-15', 95000.00, 3, '1985-10-05', '789 Pine Rd, Cityville', 'Morning', 'Part-time'),
+(4, 'Emily', 'Johnson', 'Female', 'Radiologist', '555-1122', 'emilyj@hospital.com', '2018-11-03', 110000.00, 4, '1990-12-11', '101 Elm St, Villagetown', 'Night', 'Full-time'),
+(5, 'Michael', 'Brown', 'Male', 'Oncologist', '555-3344', 'michaelb@hospital.com', '2019-09-25', 140000.00, 5, '1975-03-17', '234 Cedar Ave, Townsville', 'Morning', 'Consultant'),
+(6, 'Sophia', 'Martinez', 'Female', 'Emergency Physician', '555-5566', 'sophiam@hospital.com', '2016-07-07', 130000.00, 6, '1988-05-22', '345 Birch St, Cityville', 'Night', 'Full-time'),
+(7, 'David', 'Wilson', 'Male', 'Neurologist', '555-7788', 'davidw@hospital.com', '2014-04-19', 145000.00, 7, '1979-06-14', '567 Poplar Rd, Villagetown', 'Morning', 'Full-time'),
+(8, 'Olivia', 'Taylor', 'Female', 'Orthopedic Surgeon', '555-9900', 'oliviat@hospital.com', '2021-02-01', 135000.00, 8, '1987-09-09', '678 Chestnut Ave, Cityville', 'Night', 'Part-time'),
+(9, 'William', 'Anderson', 'Male', 'Gynecologist', '555-2233', 'williamand@hospital.com', '2016-05-12', 125000.00, 9, '1982-11-30', '789 Palm St, Villagetown', 'Morning', 'Full-time'),
+(10, 'Ava', 'Harris', 'Female', 'Psychiatrist', '555-4455', 'avah@hospital.com', '2018-10-18', 105000.00, 10, '1992-02-27', '910 Spruce Rd, Cityville', 'Night', 'Consultant');
+```
+---
+**_Result_**
+---
+![](DOCT,png)
+---
+
 
 _Medical Records Table_
 ```
@@ -120,5 +164,48 @@ CREATE TABLE Medical_Record (
     FOREIGN KEY (Doctor_ID) REFERENCES Doctor(Doctor_ID)
 );
 ```
+---
+
+_Values_
+
+```
+INSERT INTO Medical_Record (Record_ID, Patient_ID, Doctor_ID, Diagnosis, Treatment_Plan, Prescription, Visit_Date, Follow_Up)
+VALUES 
+(1, 1, 1, 'Hypertension', 'Monitor blood pressure, reduce salt intake, regular exercise', 'Amlodipine 5mg daily', '2024-01-12', '2024-02-12'),
+(2, 2, 2, 'Appendicitis', 'Surgical removal of appendix', 'Pain relievers, antibiotics', '2024-02-22', '2024-03-22'),
+(3, 3, 3, 'Asthma', 'Inhaler use, avoid allergens', 'Albuterol inhaler', '2024-03-15', '2024-04-15'),
+(4, 4, 4, 'Fractured Arm', 'Immobilization, physical therapy', 'Ibuprofen 200mg as needed', '2024-04-10', '2024-05-10'),
+(5, 5, 5, 'Lung Cancer', 'Chemotherapy and radiation', 'Chemotherapy drugs', '2024-05-25', '2024-06-25'),
+(6, 6, 6, 'Heart Attack', 'Cardiac rehabilitation, lifestyle changes', 'Aspirin, beta-blockers', '2024-06-17', '2024-07-17'),
+(7, 7, 7, 'Migraine', 'Stress management, pain relief', 'Sumatriptan 50mg', '2024-07-28', '2024-08-28'),
+(8, 8, 8, 'Arthritis', 'Physical therapy, joint protection', 'NSAIDs, pain relievers', '2024-08-08', '2024-09-08'),
+(9, 9, 9, 'Type 2 Diabetes', 'Diet control, insulin therapy', 'Metformin 500mg', '2024-09-19', '2024-10-19'),
+(10, 10, 10, 'Depression', 'Cognitive therapy, medications', 'Sertraline 50mg daily', '2024-10-04', '2024-11-04');
+```
+---
+
+**_Result_**
+---
+![](MEDREC.png)
+---
+
+## Conclusion
+
+SQL is an exceptionally powerful tool for building and managing relational databases, particularly when handling large datasets consisting of millions of rows. Its structured nature allows for efficient data storage, retrieval, and manipulation, enabling organizations to store vast amounts of data in a scalable and secure manner. With SQL, complex queries can be executed to filter, sort, and aggregate data, ensuring quick access to valuable insights from massive datasets. Additionally, SQL supports robust data integrity, seamless relationships between tables, and optimized performance, making it a critical solution for managing large-scale data environments across industries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
